@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #DDDDDD;
+}
+
+.nav-geral {
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+.nav-top {
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.nav-top a {
+  color: #121212;
+  font-size: 11px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.nav-top .top-left {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-top .jordan {
+  margin-top: 10px;
+  margin-left: 40px;
+}
+.nav-top .mfsn {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.nav-top .text-top {
+  display: flex;
+  margin-top: 8px;
+  margin-right: 40px;
+}
+
+nav.header-content {
+  background-color: #DDDDDD;
+  display: flex;
+}
+nav.header-content .nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+nav.header-content .nav-bar .nav-left {
+  margin-top: 14px;
+  margin-left: 30px;
+}
+nav.header-content .nav-bar .nav-center .center-buttons {
+  margin-top: 30px;
+  display: flex;
+}
+nav.header-content .nav-bar .nav-center .center-buttons a {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+nav.header-content .nav-bar .nav-center .center-buttons a:hover {
+  text-decoration: underline;
+}
+nav.header-content .nav-bar .nav-right {
+  display: flex;
+  margin-right: 15px;
+}
+nav.header-content .nav-bar .nav-right .busca {
+  margin-right: 25px;
+  margin-top: 20px;
+}
+nav.header-content .nav-bar .nav-right .input-search {
+  padding: 8px, 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 4px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+nav.header-content .nav-bar .nav-right .input-search i {
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 8px;
+  color: #000;
+}
+nav.header-content .nav-bar .nav-right .input-search input {
+  background-color: transparent;
+  border: none;
+  width: 140px;
+  height: 40px;
+}
+nav.header-content .nav-bar .nav-right .input-search:hover {
+  background-color: #fed733;
+}
+nav.header-content .nav-bar .nav-right .i2 {
+  margin-top: 30px;
+}
+nav.header-content .nav-bar .nav-right .icons-right {
+  display: flex;
+}
+nav.header-content .nav-bar .nav-right .icons-right i {
+  margin-right: 45px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticias {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fed733;
+  margin-top: 140px;
+  font-family: "Sora", sans-serif;
+  font-size: 30px;
+}
+
+.bg-tabela {
+  margin-right: 60px;
+  margin-left: 40px;
+  margin-top: 40px;
+  background-color: #fff;
+}
+.bg-tabela .nav-tabela {
+  display: flex;
+}
+.bg-tabela .nav-left {
+  margin-left: 20px;
+}
+.bg-tabela .nav-right {
+  margin-left: 50px;
+}
+.bg-tabela .txt-top a {
+  color: #202020;
+}
+.bg-tabela .txt-bottom a {
+  color: blue;
+}
+.bg-tabela .about {
+  color: #fff;
+  background-color: #202020;
+  margin-top: 30px;
+}
+.bg-tabela .about .group {
+  margin-left: 20px;
+}
+.bg-tabela .about .info-club {
+  margin-left: 20px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bg-tabela .about .info-club a {
+  color: #fff;
+}
+.bg-tabela .about .info-club .club {
+  font-size: 12px;
+  color: #DDDDDD;
+}
+.bg-tabela .about .info-club .infos {
+  display: flex;
+}
+.bg-tabela .about .info-club .infos a {
+  margin-left: 20px;
+}
+.bg-tabela .about .line {
+  background-color: #808080;
+  height: 1px;
+  width: 1150px;
+  margin-right: 400px;
+  margin-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.bg-tabela .about .grupo {
+  margin-left: 20px;
+}
+.bg-tabela .about .grupo img {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.bg-tabela .about .grupo .agrupamento {
+  display: flex;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 18px;
+}
+.bg-tabela .about .grupo .info-left {
+  display: flex;
+}
+.bg-tabela .about .grupo .info-right {
+  display: flex;
+}
+.bg-tabela .about .grupo .info-right a {
+  color: #fff;
+  margin-right: 30px;
+}
+.bg-tabela .about .info-left {
+  color: #fed733;
+}
+.bg-tabela .about .info-left .nome2 {
+  color: white;
+}
+
+.bg-footer {
+  height: 63vh;
+  background-color: #121212;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.txt-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.txt-nav a {
+  margin-left: 80px;
+  margin-right: 130px;
+  font-family: "Sora", sans-serif;
+  color: #fff;
+}
+.txt-nav a:hover {
+  color: #808080;
+}
+.txt-nav a .first-txt {
+  font-size: 16px;
+}
+.txt-nav a.first-txt:hover {
+  color: #fff;
+}
+.txt-nav .txt-foot {
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.txt-nav2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.txt-nav2 a {
+  margin-left: 80px;
+  margin-right: 130px;
+  font-family: "Sora", sans-serif;
+  color: #fff;
+}
+.txt-nav2 a:hover {
+  color: #808080;
+}
+.txt-nav2 a .first-txt {
+  font-size: 16px;
+}
+.txt-nav2 a.first-txt:hover {
+  color: #fff;
+}
+.txt-nav2 .txt-foot1 {
+  margin-top: 18px;
+  font-size: 12px;
+}
+.txt-nav2 .txt-foot {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.line {
+  padding: 1px;
+  width: 85%;
+  background-color: #fed733;
+  border-radius: 30px;
+  margin-top: 40px;
+  margin-left: 98px;
+}
+
+.final {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 105px;
+  margin-right: 105px;
+  font-family: "Sora", sans-serif;
+  font-size: 12px;
+}
+.final .txt-final {
+  margin-top: 60px;
+}
+.final .txt-final a {
+  color: #808080;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #121212;
+}/*# sourceMappingURL=paulista.css.map */
