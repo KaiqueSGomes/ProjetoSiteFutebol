@@ -1,13 +1,13 @@
-let usuariosModel = require("../models/usuariosModel");
+const usuariosModel = require("../models/usuariosModel");
 
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    let firstname = req.body.firstNameServer;
-    let lastname = req.body.lastNameServer;
-    let email = req.body.emailServer;
-    let numero = req.body.numberServer;
-    let senha = req.body.passwordServer;
-    let confirmpassword = req.body.confirmPasswordServer;
+    const firstname = req.body.firstNameServer;
+    const lastname = req.body.lastNameServer;
+    const email = req.body.emailServer;
+    const numero = req.body.numberServer;
+    const senha = req.body.passwordServer;
+    const confirmpassword = req.body.confirmPasswordServer;
 
     // Faça as validações dos valores
     if (firstname == undefined) {

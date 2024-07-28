@@ -159,11 +159,10 @@ nav.header-content {
 }
 
 .bg-tabela {
-    margin-right: 60px;
-    margin-left: 40px;
-    margin-top: 40px;
+    margin: 40px auto;
     background-color: $white;
-
+    width: 50%;
+    border-radius: 4px;
     .nav-tabela {
         display: flex;
     }
@@ -177,6 +176,7 @@ nav.header-content {
     }
 
     .txt-top {
+        margin-top: 5px;
         a {
             color: $primary-dark;
         }
@@ -193,8 +193,11 @@ nav.header-content {
         color: $white;
         background-color: $primary-dark;
         margin-top: 30px;
-        .group{
+        width: 100%;
+        border-radius: 4px;
+        h4{
             margin-left: 20px;
+            margin-top: 12px;
         }
 
         .info-club{
@@ -215,19 +218,20 @@ nav.header-content {
         
             .infos{
                 display: flex;
-                a{
-                    margin-left: 20px;
+                margin-left: 270px;
+                width: 100%;
+                div{
+                    min-width: 20px;
+                    margin: 0 0 0 auto;
+                    font-size: 14px;
                 }
             }
         }
         .line{
             background-color: $primary-normal;
             height: 1px;
-            width: 1150px;
-            margin-right: 400px;
-            margin-left: 20px;
-            margin-top: 8px;
-            margin-bottom: 8px;
+            width: 100%;
+            margin: 5px 0;
         }
 
         .grupo{
@@ -239,7 +243,7 @@ nav.header-content {
                 margin-left: 10px;
             }
             .agrupamento{
-                
+                margin-bottom: 4px;
                 display: flex;
                 display: flex;
                 justify-content: space-between;
@@ -250,18 +254,34 @@ nav.header-content {
                 display: flex;
             }
 
-            .info-right{
-                display: flex;
-                a{
-                    color: $white;
-                    margin-right: 30px;
+            .posicao{
+                width: 10px;
+                text-align: center;
+                div{
+                    width: 100%;
                 }
+            }
+
+            .info-right{
+                margin-right: 8px;
+                display: flex;
+                width: 378px;
+                text-align: center;
+
+                div{
+                    a{
+                        color: $white;
+                    }
+                    width: 100%;
+                }
+                    
+                
             }
         }
 
         .info-left{
             color: $secundary-normal;
-            .nome2{
+            .nome2{ 
                 color: white;
             }
         }
@@ -282,7 +302,7 @@ nav.header-content {
 .nav-footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+
 
 }
 
@@ -378,8 +398,13 @@ nav.header-content {
     }
 }
 
+.aln{
+    text-align-last: justify;
+}
+
 a {
     cursor: pointer;
     text-decoration: none;
     color: $tertiary-Dark;
 }
+

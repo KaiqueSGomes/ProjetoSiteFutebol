@@ -131,10 +131,10 @@ nav.header-content .nav-bar .nav-right .icons-right i {
 }
 
 .bg-tabela {
-  margin-right: 60px;
-  margin-left: 40px;
-  margin-top: 40px;
+  margin: 40px auto;
   background-color: #fff;
+  width: 50%;
+  border-radius: 4px;
 }
 .bg-tabela .nav-tabela {
   display: flex;
@@ -144,6 +144,9 @@ nav.header-content .nav-bar .nav-right .icons-right i {
 }
 .bg-tabela .nav-right {
   margin-left: 50px;
+}
+.bg-tabela .txt-top {
+  margin-top: 5px;
 }
 .bg-tabela .txt-top a {
   color: #202020;
@@ -155,9 +158,12 @@ nav.header-content .nav-bar .nav-right .icons-right i {
   color: #fff;
   background-color: #202020;
   margin-top: 30px;
+  width: 100%;
+  border-radius: 4px;
 }
-.bg-tabela .about .group {
+.bg-tabela .about h4 {
   margin-left: 20px;
+  margin-top: 12px;
 }
 .bg-tabela .about .info-club {
   margin-left: 20px;
@@ -174,18 +180,19 @@ nav.header-content .nav-bar .nav-right .icons-right i {
 }
 .bg-tabela .about .info-club .infos {
   display: flex;
+  margin-left: 270px;
+  width: 100%;
 }
-.bg-tabela .about .info-club .infos a {
-  margin-left: 20px;
+.bg-tabela .about .info-club .infos div {
+  min-width: 20px;
+  margin: 0 0 0 auto;
+  font-size: 14px;
 }
 .bg-tabela .about .line {
   background-color: #808080;
   height: 1px;
-  width: 1150px;
-  margin-right: 400px;
-  margin-left: 20px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  width: 100%;
+  margin: 5px 0;
 }
 .bg-tabela .about .grupo {
   margin-left: 20px;
@@ -195,6 +202,7 @@ nav.header-content .nav-bar .nav-right .icons-right i {
   margin-left: 10px;
 }
 .bg-tabela .about .grupo .agrupamento {
+  margin-bottom: 4px;
   display: flex;
   display: flex;
   justify-content: space-between;
@@ -203,12 +211,24 @@ nav.header-content .nav-bar .nav-right .icons-right i {
 .bg-tabela .about .grupo .info-left {
   display: flex;
 }
-.bg-tabela .about .grupo .info-right {
-  display: flex;
+.bg-tabela .about .grupo .posicao {
+  width: 10px;
+  text-align: center;
 }
-.bg-tabela .about .grupo .info-right a {
+.bg-tabela .about .grupo .posicao div {
+  width: 100%;
+}
+.bg-tabela .about .grupo .info-right {
+  margin-right: 8px;
+  display: flex;
+  width: 378px;
+  text-align: center;
+}
+.bg-tabela .about .grupo .info-right div {
+  width: 100%;
+}
+.bg-tabela .about .grupo .info-right div a {
   color: #fff;
-  margin-right: 30px;
 }
 .bg-tabela .about .info-left {
   color: #fed733;
@@ -225,7 +245,6 @@ nav.header-content .nav-bar .nav-right .icons-right i {
 .nav-footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
 }
 
 .txt-nav {
@@ -304,6 +323,11 @@ nav.header-content .nav-bar .nav-right .icons-right i {
 }
 .final .txt-final a {
   color: #808080;
+}
+
+.aln {
+  -moz-text-align-last: justify;
+       text-align-last: justify;
 }
 
 a {

@@ -14,6 +14,13 @@
     <title>Campeonato Paulista</title>
 </head>
 
+<script src="https://futiba.ai/futiba@0.0.1.min.js"></script>
+<script>
+  FUTIBA.init({
+    apiKey: "vIk9AWVGpCKdZ2Z2O6ug"
+  });
+</script>
+
 <body>
     <!--HEADER-->
     <div class="bg-home">
@@ -102,23 +109,32 @@
                     <div class="nav-left">
                         <div class="txt-top"><a href="#">Liga</a></div>
                         <div class="txt-bottom">
-                            <a href="#">Campeonato Paulista</a>
+                            <select name="camp" id="camp">
+                                <option value="paulista">Paulista</option>
+                                <option value="paulista">Brasileiro</option>
+                                <option value="paulista">Carioca</option>
+                            </select>
                             <a href="#"><i class="bi bi-caret-down-fill"></i></a>
                         </div>
                     </div>
                     <div class="nav-right">
                         <div class="txt-top"><a href="#">Temporada</a></div>
                         <div class="txt-bottom">
-                            <a href="#">2024</a>
+                            <select name="year" id="year">
+                                <option value="24">2024</option>
+                                <option value="23">2023</option>
+                                <option value="22">2022</option>
+                                <option value="21">2021</option>
+                                <option value="20">2020</option>
+                            </select>
                             <a href="#"><i class="bi bi-caret-down-fill"></i></a>
                         </div>
                     </div>
                 </div>
                 <!--ABOUT-->
+                <!--CONTENT GRUPO A-->
                 <div class="about">
-                    <div class="group">
-                        Grupo A
-                    </div>
+                    <h4>Grupo A</h4>
 
                     <div class="info-club">
                         <div class="clube">
@@ -128,35 +144,32 @@
                             <div><a href="#">PT</a></div>
                             <div><a href="#">PJ</a></div>
                             <div><a href="#">VI</a></div>
-                            <div><a href="#">EM</a></div>
-                            <div><a href="#">DE</a></div>
+                            <div><a href="#">OT</a></div>
+                            <div><a href="#">DE </a></div>
                             <div><a href="#">GM</a></div>
                             <div><a href="#">GC</a></div>
                             <div><a href="#">SG</a></div>
                         </div>
                     </div>
 
-                    <div class="line"></div>
-
                     <div class="grupo">
-                        <div class="complexo">
+                        <div class="line"></div>
                             <div class="agrupamento">
-                                <div class="info-left">
-                                    <div class="blue-bar"></div>
+                                <div class="info-left" id="info-left">
                                     <div class="posicao">1</div>
-                                    <div class="imagem"><img src="/assets/Santos.png" alt="Santos" width="25px"
+                                    <div class="imagem" id="primeiro-time"><img src="/public/assets/santos-logo.svg" alt="Santos" width="25px"
                                             height="25px"></div>
                                     <div class="nome">Santos</div>
                                 </div>
 
                                 <div class="info-right">
-                                    <div><a href="#">22</a></div>
-                                    <div><a href="#">10</a></div>
-                                    <div><a href="#">7</a></div>
-                                    <div><a href="#">1</a></div>
-                                    <div><a href="#">2</a></div>
-                                    <div><a href="#">15</a></div>
+                                    <div><a href="#">25</a></div>
+                                    <div><a href="#">12</a></div>
                                     <div><a href="#">8</a></div>
+                                    <div><a href="#">1</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">18</a></div>
+                                    <div><a href="#">11</a></div>
                                     <div><a href="#">7</a></div>
                                 </div>
                             </div>
@@ -164,45 +177,115 @@
                             <div class="line"></div>
 
                             <div class="agrupamento">
-                                <div class="info-left">
+                                <div class="info-left" id="info-left">
                                     <div class="blue-bar"></div>
                                     <div class="posicao">2</div>
-                                    <div class="imagem"><img src="/assets/Portuguesa.png" alt="Santos" width="25px"
+                                    <div class="imagem" id="segundo-time"><img src="assets/portuguesa-sp-logo.svg" alt="Portuguesa" width="25px"
                                             height="25px"></div>
                                     <div class="nome">Portuguesa</div>
                                 </div>
 
                                 <div class="info-right">
-                                    <div><a href="#">7</a></div>
-                                    <div><a href="#">9</a></div>
-                                    <div><a href="#">2</a></div>
+                                    <div><a href="#">10</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">3</a></div>
                                     <div><a href="#">1</a></div>
-                                    <div><a href="#">6</a></div>
-                                    <div><a href="#">7</a></div>
-                                    <div><a href="#">13</a></div>
-                                    <div><a href="#">-6</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">-9</a></div>
                                 </div>
                             </div>
 
                             <div class="line"></div>
 
                             <div class="agrupamento">
-                                <div class="info-left">
+                                <div class="info-left" id="info-left">
                                     <div class="blue-bar"></div>
                                     <div class="posicao">3</div>
-                                    <div class="imagem"><img src="/assets/agoravai.png" alt="Santos" width="25px"
+                                    <div class="imagem" id="terceiro-time"><img src="assets/ec-santo-andre-logo.svg" alt="SA" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">Santo André</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">1</a></div>
+                                    <div><a href="#">5</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">-9</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">4</div>
+                                    <div class="imagem" id="quarto-time"><img src="assets/ituano-logo-escudo.svg" alt="Ituano" width="25px"
                                             height="25px"></div>
                                     <div class="nome2">Ituano</div>
                                 </div>
 
                                 <div class="info-right">
                                     <div><a href="#">6</a></div>
-                                    <div><a href="#">10</a></div>
+                                    <div><a href="#">12</a></div>
                                     <div><a href="#">1</a></div>
                                     <div><a href="#">3</a></div>
-                                    <div><a href="#">6</a></div>
-                                    <div><a href="#">3</a></div>
-                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">5</a></div>
+                                    <div><a href="#">19</a></div>
+                                    <div><a href="#">-14</a></div>
+                                </div>
+                            </div>
+
+                        
+
+                    </div>
+
+                </div>
+                <!--CONTENT GRUPO B-->
+                <div class="about">
+                    <h4>Grupo B</h4>
+
+                    <div class="info-club">
+                        <div class="clube">
+                            <a href="#" class="club">Clube</a>
+                        </div>
+                        <div class="infos">
+                            <div><a href="#">PT</a></div>
+                            <div><a href="#">PJ</a></div>
+                            <div><a href="#">VI</a></div>
+                            <div><a href="#">OT</a></div>
+                            <div><a href="#">DE </a></div>
+                            <div><a href="#">GM</a></div>
+                            <div><a href="#">GC</a></div>
+                            <div><a href="#">SG</a></div>
+                        </div>
+                    </div>
+
+                    <div class="grupo">
+                        <div class="line"></div>
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="posicao">1</div>
+                                    <div class="imagem" id="primeiro-time"><img src="/public/assets/palmeiras-logo-escudo.svg" alt="Santos" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome">Palmeiras</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">28</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">0</a></div>
+                                    <div><a href="#">20</a></div>
+                                    <div><a href="#">9</a></div>
                                     <div><a href="#">11</a></div>
                                 </div>
                             </div>
@@ -210,27 +293,305 @@
                             <div class="line"></div>
 
                             <div class="agrupamento">
-                                <div class="info-left">
+                                <div class="info-left" id="info-left">
                                     <div class="blue-bar"></div>
-                                    <div class="posicao">4</div>
-                                    <div class="imagem"><img src="/assets/agrvaipt2.png" alt="Santos" width="25px"
+                                    <div class="posicao">2</div>
+                                    <div class="imagem" id="segundo-time"><img src="/public/assets/ponte-preta-logo-escudo.svg" alt="Portuguesa" width="25px"
                                             height="25px"></div>
-                                    <div class="nome2">Santo André</div>
+                                    <div class="nome">Ponte Preta</div>
                                 </div>
 
                                 <div class="info-right">
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">4</a></div>
                                     <div><a href="#">5</a></div>
-                                    <div><a href="#">10</a></div>
-                                    <div><a href="#">0</a></div>
-                                    <div><a href="#">5</a></div>
-                                    <div><a href="#">5</a></div>
-                                    <div><a href="#">5</a></div>
-                                    <div><a href="#">14</a></div>
-                                    <div><a href="#">9</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">15</a></div>
+                                    <div><a href="#">11</a></div>
+                                    <div><a href="#">4</a></div>
                                 </div>
                             </div>
 
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">3</div>
+                                    <div class="imagem" id="terceiro-time"><img src="/public/assets/e-c-agua-santa-logo.svg" alt="SA" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">Água Santa</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">15</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">5</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">11</a></div>
+                                    <div><a href="#">-3</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">4</div>
+                                    <div class="imagem" id="quarto-time"><img src="/public/assets/guarani-logo.svg" alt="Ituano" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">Guarani</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">10</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">2</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">10</a></div>
+                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">-4</a></div>
+                                </div>
+                            </div>
+
+                        
+
+                    </div>
+
+                </div>
+                <!--CONTENT GRUPO C-->
+                <div class="about">
+                    <h4>Grupo C</h4>
+
+                    <div class="info-club">
+                        <div class="clube">
+                            <a href="#" class="club">Clube</a>
                         </div>
+                        <div class="infos">
+                            <div><a href="#">PT</a></div>
+                            <div><a href="#">PJ</a></div>
+                            <div><a href="#">VI</a></div>
+                            <div><a href="#">OT</a></div>
+                            <div><a href="#">DE </a></div>
+                            <div><a href="#">GM</a></div>
+                            <div><a href="#">GC</a></div>
+                            <div><a href="#">SG</a></div>
+                        </div>
+                    </div>
+
+                    <div class="grupo">
+                        <div class="line"></div>
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="posicao">1</div>
+                                    <div class="imagem" id="primeiro-time"><img src="/public/assets/red-bull-bragantino-logo.svg" alt="Santos" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome">Bragantino</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">21</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">13</a></div>
+                                    <div><a href="#">9</a></div>
+                                    <div><a href="#">4</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">2</div>
+                                    <div class="imagem" id="segundo-time"><img src="/public/assets/inter-limeira-logo-escudo.svg" alt="Portuguesa" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome">Inter de Limenira</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">5</a></div>
+                                    <div><a href="#">2</a></div>
+                                    <div><a href="#">5</a></div>
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">15</a></div>
+                                    <div><a href="#">2</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">3</div>
+                                    <div class="imagem" id="terceiro-time"><img src="/public/assets/corinthians-logo-2.svg" alt="SA" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">Corinthians</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">2</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">0</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">4</div>
+                                    <div class="imagem" id="quarto-time"><img src="/public/assets/mirassol-logo-escudo.svg" alt="Ituano" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">Mirassol</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">5</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">17</a></div>
+                                    <div><a href="#">0</a></div>
+                                </div>
+                            </div>
+
+                        
+
+                    </div>
+
+                </div>
+                <!--CONTENT GRUPO D-->
+                <div class="about">
+                    <h4>Grupo D</h4>
+
+                    <div class="info-club">
+                        <div class="clube">
+                            <a href="#" class="club">Clube</a>
+                        </div>
+                        <div class="infos">
+                            <div><a href="#">PT</a></div>
+                            <div><a href="#">PJ</a></div>
+                            <div><a href="#">VI</a></div>
+                            <div><a href="#">OT</a></div>
+                            <div><a href="#">DE </a></div>
+                            <div><a href="#">GM</a></div>
+                            <div><a href="#">GC</a></div>
+                            <div><a href="#">SG</a></div>
+                        </div>
+                    </div>
+
+                    <div class="grupo">
+                        <div class="line"></div>
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="posicao">1</div>
+                                    <div class="imagem" id="primeiro-time"><img src="/public/assets/sao-paulo-fc-logo.svg" alt="Santos" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome">São Paulo</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">22</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">2</a></div>
+                                    <div><a href="#">20</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">8</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">2</div>
+                                    <div class="imagem" id="segundo-time"><img src="/public/assets/gremio-novorizontino-logo-escudo.svg" alt="Portuguesa" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome">Novorizontino</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">22</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">4</a></div>
+                                    <div><a href="#">2</a></div>
+                                    <div><a href="#">16</a></div>
+                                    <div><a href="#">10</a></div>
+                                    <div><a href="#">6</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">3</div>
+                                    <div class="imagem" id="terceiro-time"><img src="/public/assets/sao-bernardo-fc-logo.svg" alt="SA" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">São Bernardo</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">21</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">14</a></div>
+                                    <div><a href="#">9</a></div>
+                                    <div><a href="#">5</a></div>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+
+                            <div class="agrupamento">
+                                <div class="info-left" id="info-left">
+                                    <div class="blue-bar"></div>
+                                    <div class="posicao">4</div>
+                                    <div class="imagem" id="quarto-time"><img src="/public/assets/botafogo-sp-logo.svg" alt="Ituano" width="25px"
+                                            height="25px"></div>
+                                    <div class="nome2">Botafogo SP</div>
+                                </div>
+
+                                <div class="info-right">
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">12</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">3</a></div>
+                                    <div><a href="#">6</a></div>
+                                    <div><a href="#">8</a></div>
+                                    <div><a href="#">16</a></div>
+                                    <div><a href="#">-8</a></div>
+                                </div>
+                            </div>
+
+                        
 
                     </div>
 

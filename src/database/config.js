@@ -1,9 +1,9 @@
-var mysql = require("mysql2");
-var sql = require('mysql');
+const mysql = require("mysql2");
+const sql = require('mysql');
 
 
 // CONEXÃO DO SQL SERVER - AZURE (NUVEM)
-var sqlServerConfig = {
+const sqlServerConfig = {
     server: "SEU_SERVIDOR",
     database: "SEU_BANCO_DE_DADOS",
     user: "SEU_USUARIO",
@@ -19,7 +19,7 @@ var sqlServerConfig = {
 }
 
 // CONEXÃO DO MYSQL WORKBENCH
-var mySqlConfig = {
+const mySqlConfig = {
     host: "localhost",
     database: "MFSN",
     user: "root",
@@ -45,7 +45,7 @@ function executar(instrucao) {
         });
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         return new Promise(function (resolve, reject) {
-            var conexao = mysql.createConnection(mySqlConfig);
+            const conexao = mysql.createConnection(mySqlConfig);
             conexao.connect();
             conexao.query(instrucao, function (erro, resultados) {
                 conexao.end();

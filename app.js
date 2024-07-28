@@ -1,14 +1,14 @@
 process.env.AMBIENTE_PROCESSO = "desenvolvimento";
 // process.env.AMBIENTE_PROCESSO = "producao";
 
-let express = require("express");
-let cors = require("cors");
-let path = require("path");
-let porta = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3000 : 8080;
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const porta = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3000 : 8080;
 
-let app = express();
+const app = express();
 
-let usuarioRouter = require("./src/routes/usuarios");
+const usuarioRouter = require("./src/routes/usuarios");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
