@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="scss/cadastro.css">
+
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-img">
+            <img src="assets/img-esporte.jpg" alt="Imagem de esportes">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="#">Entrar</a></button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Primeiro nome</label>
+                        <input type="text" id="input_firstName" name="firstname" placeholder="Primeiro nome">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname">Sobrenome</label>
+                        <input type="text" id="input_lastName" name="lastname" placeholder="Sobrenome">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email" id="input_email" name="email" placeholder="exemplo@gmail.com">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number">Celular</label>
+                        <input type="tel" id="input_number" name="number" placeholder="(XX) XXXXX-XXXX">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" id="input_password" name="password" placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="input-box">
+                        <label for="confirmPassword">Confirme sua senha</label>
+                        <input type="password" id="input_confirmPassword" name="confirmPassword" placeholder="Digite sua senha">
+                    </div>
+
+                    <div class="gender-inputs">
+                        <div class="gender-title">
+                            <h6>Gênero</h6>
+                        </div>
+
+                        <div class="gender-group">
+                            <div class="gender-input">
+                                <input type="radio" id="female" name="gender">
+                                <label for="famale">Feminino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="male" name="gender">
+                                <label for="male">Masculino</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="others" name="gender">
+                                <label for="others">Outros</label>
+                            </div>
+
+                            <div class="gender-input">
+                                <input type="radio" id="none" name="gender">
+                                <label for="none">Prefiro não dizer</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="continue-button">
+                    <button onclick="cadastrar()">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function cadastrar(){
+        let firstVar = input_firstName.value;
+        let lastVar = input_lastName.value;
+        let emailVar = input_email.value;
+        let numberVar = input_number.value;
+        let passwordVar = input_password.value;
+        let confirmPassword = input_confirmPassword.value;
+
+        if(firstVar == ``){
+            alert(`Nome vazio!`)
+        } else if(firstVar.indexOf(' ') >= 0){
+            alert(`Insira apenas o PRIMEIRO nome!`)
+        } else if(lastVar == ``){
+            alert(`Sobrenome vazio!`)
+        } else if(emailVar == ``){
+            alert(`E-mail vazio!`)
+        } else if(emailVar.indexOf('@') == -1){
+            alert(`E-mail invalido. Não contem '@'!`)
+        } else if(numberVar == ``){
+            alert(`Número vazio!`)
+        } else if(passwordVar.length < 8){
+            alert(`Senha deve conter 8 digitos!`)
+        } else if(passwordVar == ``){
+            alert(`Senha vazia!`)
+        } else if(confirmPassword == ``){
+            alert(`confirmação de senha vazia!`)
+        } else if(confirmPassword != passwordVar){
+            alert(`As senha não coincidem!`)
+        } else{
+            alert(`Cadastro realizado com sucesso!`)
+        }
+
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                firstNameServer: firstVar,
+                lastNameServer: lastVar,
+                emailServer: emailVar,
+                numberServer: numberVar,
+                passwordServer: passwordVar,
+                confirmPasswordServer: confirmPassword, 
+            }),
+        })
+        .then(function (resposta) {
+            console.log("Resposta: ", resposta);
+
+            if(resposta.ok){
+                alert(`Cadastro realizado com sucesso! Redirecionando para a tela de login...`)
+            
+                setTimeout(() => {
+                    window.location = "paulista.html";
+                }, "2000");
+            } else {
+                throw "Houve um erro ao realizar o cadastro!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+        return false;
+    }
+</script>
