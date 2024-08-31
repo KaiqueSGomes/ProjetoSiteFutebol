@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button onclick="cadastrar()">Cadastrar</button>
+                    <a href="index.html"><button onclick="cadastrar()">Cadastrar</button></a>
                 </div>
             </form>
         </div>
@@ -128,9 +128,7 @@
             alert(`As senha não coincidem!`)
         } else{
             alert(`Cadastro realizado com sucesso!`)
-        }
-
-        fetch("/usuarios/cadastrar", {
+            fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -153,7 +151,7 @@
                 alert(`Cadastro realizado com sucesso! Redirecionando para a tela de login...`)
             
                 setTimeout(() => {
-                    window.location = "paulista.html";
+                    window.location = "index.html";
                 }, "2000");
             } else {
                 throw "Houve um erro ao realizar o cadastro!";
@@ -164,5 +162,7 @@
         });
 
         return false;
+        }
+
     }
 </script>
